@@ -5,7 +5,13 @@
 # Исходные данные:
 fruits = ["яблоко", "банан", "киви", "арбуз"]
 
-# TODO: your code here
+max_len=0
+
+for el in fruits:
+    if len(el)>max_len:
+        max_len=len(el)
+for i,el in enumerate(fruits,1):
+    print(i,".", " "* (max_len-len(el)), el)
 
 # Пример вывода:
 # 1. яблоко
