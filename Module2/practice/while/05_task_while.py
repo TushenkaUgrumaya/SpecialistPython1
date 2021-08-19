@@ -17,4 +17,16 @@
 # #
 
 
-# TODO: your code here
+a = int(input("Введите число а:"))
+i = 1
+
+while i <= a:
+    column = 1
+    while column <= a:
+        if i == column or i == a - column + 1:
+            print("#", end='')
+        else:
+            print(" ", end='')
+        column += 1
+    print()
+    i += 1
