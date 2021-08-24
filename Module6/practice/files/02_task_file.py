@@ -10,6 +10,27 @@
 # Совет: сначала считайте все цены из файла, сохраните в список,
 # преобразовав каждую цену к числу(цены в файле хранятся в виде строк)
 # А затем, работам с привычным списком, выполните задания
-prices = []
 
-# Подсказка: для преобразования строки в список вспомните про метод строки .split()
+f = open("sold.txt", "r",)
+
+prices = []
+for line in f:
+    prices += line.split()
+print(prices)
+
+prices_float = []
+for el in prices:
+    prices_float.append(float(el))
+print(prices_float)
+
+# На какую сумму было продано товаров
+
+print("Выручка на сегодня = ", sum(prices_float))
+
+# Цена самого дорогого товара
+
+print("Top sales: ", max(prices_float))
+
+# Цена самого дешевого товара
+
+print("bad sales: ", min(prices_float))
