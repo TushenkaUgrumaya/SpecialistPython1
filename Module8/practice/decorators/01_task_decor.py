@@ -7,3 +7,24 @@
 # *23*
 # ****
 # (кол-во звездочек зависит от длины возвращаемого значения)
+
+ef new_decorator(function_to_decorate):
+    def wrapper():
+        print("*"*(l+2))
+        function_to_decorate()  # Сама функция
+        print("*"*(l+2))
+
+    return wrapper
+
+
+# Вот так просто мы можем декорировать любую функцию
+@new_decorator
+def simple_function():
+    print("*",name,"*")
+#
+name = input()
+l = len(name)
+# # Вызываем декорируемую функцию:
+simple_function()
+
+# new_decorator(simple_function)()
