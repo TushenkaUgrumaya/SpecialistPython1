@@ -7,3 +7,9 @@
 # Пользователь должен понимать, что его просят ввести и что именно делает программа.
 
 
+side_a = int(input('Длина: '))
+side_b = int(input('Ширина: '))
+side_c = int(input('Высота: '))
+
+print('Площадь =',  (side_a*side_b+side_a*side_c+side_c*side_b)*2) #S = 2(ab + bc + ac
+print('Объем=', side_a*side_b*side_c)
